@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.blue{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script type="text/javascript">
+			//获取所有的div
+			var div = document.getElementsByTagName("div");
+//			console.log(div);
+			//使用for循环遍历所有的div,并且赋予他们同样的属性
+			for(var i=0;i<div.length;i++){
+				div[i].style.width="50px";
+				div[i].style.height="50px";
+				div[i].style.backgroundColor="red";
+				div[i].style.margin="20px";
+				div[i].style.display="inline-block";
+			}
+			//因为内联的优先级大于css 所以要先清除一个第三个div的背景颜色.
+			//如果要是不先把背景颜色设置为0 那么它就不会显示blue但是一样会被赋予blue类
+			div[2].style.backgroundColor="";
+			//再给第三个div赋予blue类属性
+			div[2].className = "blue";
+		</script>
+	</body>
+</html>
