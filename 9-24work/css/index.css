@@ -313,6 +313,10 @@ li{
 #bottom>div>a{
 	color:#fff;
 }
+#bottom>div>span>a{
+	font-size: 12px;
+	color: #fff;
+}
 /*固定导航栏*/
 .a{
 	position:fixed; 
