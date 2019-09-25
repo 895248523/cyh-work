@@ -238,7 +238,7 @@ li{
 #text1{
 	height: 42px;
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 10px;
 	overflow: hidden;
 	flex-flow: nowrap;
 }
