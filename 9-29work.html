@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<div id="content">
+			<label for="txt">账号</label>
+			<input type="text" name="" id="txt" value="" />
+			<span id="tishi-text"></span>
+			<br />
+			<label for="pwd">密码</label>
+			<input type="password" name="pwd" id="pwd" value="" />
+			<span id="tishi-pwd"></span>
+			<br />
+			<label for="pwd1">确认密码</label>
+			<input type="password" name="pwd" id="pwd1" value="" />
+			<span id="tishi-pwd2"></span>
+			<br />
+			<input type="button" name="" id="btn" value="注册" />
+		</div>
+		<script type="text/javascript">
+			var txt = document.getElementById("txt");
+			var pwd = document.getElementById("pwd");
+			var pwd1 = document.getElementById("pwd1");
+			var btn = document.getElementById("btn");
+			var tt = document.getElementById("tishi-text");
+			var tspwd1 = document.getElementById("tishi-pwd");
+			var tspwd2 = document.getElementById("tishi-pwd2");
+			var yytxt = ["tom","jack","lili"];
+			focus(txt,tt);
+			focus(pwd,tspwd1);
+			focus(pwd1,tspwd2);
+			btn.onclick=function(){
+				if(txt.value==""){
+					tt.innerHTML="账号不能为空";
+				}else if(txt.value==yytxt[0]||txt.value==yytxt[1]||txt.value==yytxt[2]){
+					tt.innerHTML="用户名已存在";
+				}else if(pwd.value==""){
+					tspwd1.innerHTML="密码不能为空";
+				}else if(pwd1.value==""){
+					tspwd2.innerHTML="密码不能为空";
+				}else if(pwd1.value!=pwd.value){
+					tspwd2.innerHTML="两次密码不同,请重新输入";
+				}else{
+					txt.value="";
+					pwd.value="";
+					pwd1.value="";
+					tt.innerHTML="";
+					tspwd1.innerHTML="";
+					tspwd2.innerHTML="";
+					alert("注册成功");
+					
+					
+				}
+			}
+			function focus(id,t1){
+				return id.onfocus=function(){
+					t1.innerHTML="";
+				}
+			}
+		</script>
+	</body>
+</html>
