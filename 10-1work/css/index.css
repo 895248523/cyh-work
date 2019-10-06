@@ -84,15 +84,17 @@ li{
 	position: absolute;
 	top: -10px;
 }
-#content{
+#content,#content ul{
 	display: flex;
 	justify-content: space-between;
 	flex-flow: nowrap;
+	
+}
+#content{
 	padding: 35px 0px 35px 0px;
 }
 #c-nav{
 	line-height: 58px;
-	
 }
 #c-nav ul li{
 	margin-right: 20px;
@@ -183,6 +185,7 @@ li{
 	border-left: 1px solid #9a9a9a;
 }
 #three-btn{
+	display: flex;
 	margin-top: 40px;
 	margin-bottom: 60px;
 }
@@ -193,6 +196,7 @@ li{
 	color: #fff;
 	background-color: #323232;
 	font-size: 15px;
+	margin-right: 10px;
 }
 #three-btn>.btn-a:hover{
 	color: darkgray;
@@ -229,7 +233,12 @@ li{
 	color: #323232;
 	border-bottom:1px solid #e1e1e1;
 }
-
+#content-last{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: nowrap;
+	
+}
 .last-d{
 	display: inline-block;
 	width: 40%;
@@ -237,12 +246,15 @@ li{
 	
 }
 #last-one {
-	padding: 30px 30px;
+	width: 40%;
+	padding: 25px 25px;
 	overflow: hidden;
 	margin-bottom:134px ;
-		
+	float: left;
+	margin-right: 15px;
 }
 #one-h3{
+	
 	font-weight: 400;
 	font-style: italic;
 	font-size: 22px;
@@ -254,8 +266,9 @@ li{
 	font-weight: 200;
 }
 #in{
+	width: 80%;
 	padding: 12px 15px;
-	padding-right: 80px;
+	/*padding-right: 80px;*/
 	border-radius:0 ;
 	border: #e1e1e1;
 	font-size: 16px;
@@ -276,13 +289,14 @@ li{
 	color: lightgrey;
 }
 #last-two{
-	
-	width: 37%;
+	/*width: 37%;*/
 	padding: 30px 35px;
-	margin-left: 30px;
+	float: right;
 	overflow: hidden;
 }
+
 .la-select{
+	width: 100%;
 	margin-bottom: 25px;
 	border-radius: 0;
 	height: 40px;
@@ -291,8 +305,8 @@ li{
 	outline: none;
 }
 #in1{
+	width: 90%;
 	padding: 12px 12px;
-	padding-right: 62px;
 	border-radius:0 ;
 	border: #e1e1e1;
 	font-size: 16px;
