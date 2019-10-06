@@ -11,18 +11,20 @@ a{
 	text-decoration: none;
 }
 #con{
-	width: 75%;
+	width: 100%;
+}
+#con1{
+	width: 80%;
 	margin: 0 auto;
-	position: relative;
 }
 #con-content{
-	width: 64%;
+	width: 64%; /*//64%*/
 	display: inline-block;
 	float: left;
 }
 #con-content2{
 	display: inline-block;
-	width: 32%;
+	width: 34%;
 	float: right;
 }
 li{
@@ -487,6 +489,6 @@ li{
 #iframe{
 	width: 100%;
 	height: 752px;
+	display: inline-block;
 }
-
 
