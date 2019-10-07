@@ -14,11 +14,11 @@ a{
 	width: 100%;
 }
 #con1{
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 }
 #con-content{
-	width: 64%; /*//64%*/
+	width: 60%;
 	display: inline-block;
 	float: left;
 }
@@ -54,7 +54,6 @@ li{
 #top-right{
 	width: 47%;
 	float:right;
-	display: block;
 	padding: 19px 10px 19px 0px;
 	opacity: 0.5;
 }
@@ -491,4 +490,5 @@ li{
 	height: 752px;
 	display: inline-block;
 }
+
 
