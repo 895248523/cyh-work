@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
 			body{
-				width: 300px;
+				width: 400px;
 				margin: 0 auto;
 			}
 			#box{
@@ -23,6 +23,7 @@
 				line-height: 50px;
 				text-align: center;
 				background-size: cover;
+				border-radius: 10px;
 			}
 			.red{
 				background-color: cornflowerblue;
@@ -48,8 +49,8 @@
 				for(var j=0;j<6;j++){
 					var divs=document.createElement("div");
 					box.appendChild(divs);
-					divs.style.left=j*64+'px';
-					divs.style.top=i*64+'px';
+					divs.style.left=j*66+'px';
+					divs.style.top=i*66+'px';
 					divs.setAttribute("al",arr[i][j]);
 					divs.style.backgroundImage='url('+arr[i][j]+'.png)';
 					divs.onclick=function(){
