@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				width: 300px;
+				margin: 0 auto;
+			}
+			#box{
+				overflow: :hidden;
+				position: relative;
+				width: 100%;
+				height: 600px;
+				margin-top: 200px;
+			}
+			#box div{
+				width: 64px;
+				height: 64px;
+				border: 2px solid pink;
+				position: absolute;
+				line-height: 50px;
+				text-align: center;
+				background-size: cover;
+			}
+			.red{
+				background-color: cornflowerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var arr=[
+				[1,2,3,0,5,4],
+				[3,2,1,0,4,5],
+				[5,4,2,3,0,1],
+				[2,5,1,4,3,0],
+				[2,0,1,3,4,5],
+				[5,2,1,4,3,0],
+			];
+			var narr=[];
+			var box =document.getElementById("box");
+			for(var i=0;i<6;i++){
+				for(var j=0;j<6;j++){
+					var divs=document.createElement("div");
+					box.appendChild(divs);
+					divs.style.left=j*64+'px';
+					divs.style.top=i*64+'px';
+					divs.setAttribute("al",arr[i][j]);
+					divs.style.backgroundImage='url('+arr[i][j]+'.png)';
+					divs.onclick=function(){
+						if(narr.length<=1){
+							if(this.className=='red'){
+								alert("请不要重复选择");
+							}else{
+								narr.push(Number(this.getAttribute("al")));
+								this.className="red";
+							}
+							
+						}else{
+							narr=[];
+							var bq=box.querySelectorAll("#box>div");
+							for(var z=0;z<bq.length;z++){
+								bq[z].className='';
+							}
+							this.className="red";
+							narr.push(Number(Number(this.getAttribute("al"))));
+						}
+						if(narr[0]-narr[1]==0){
+							var sr=box.querySelectorAll(".red");
+							for(var e=0;e<sr.length;e++){
+								sr[e].style.backgroundImage="";
+								sr[e].className="";
+								sr[e].onclick=null;
+							}
+						}
+					}
+				}
+			}
+					
+		</script>
+	</body>
+</html>
