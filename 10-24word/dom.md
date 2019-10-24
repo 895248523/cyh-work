@@ -57,31 +57,31 @@
 获取最后一个兄弟节点:nextSibling      
 注意：只能获取一个       
 六：元素的宽高属性       
-	1：获取元素的宽：          
-			元素.style：只能获取内联样式。          
-			元素.offsetWidth ：获取元素的宽，也包含了内边距和边框    
-			元素.clientWidth：获取元素的宽，不包含边框     
-2.	获取元素的高:          
-	元素.offsetHeight ：获取元素的高，也包含了内边距和边框       
-	元素.clientHeight：获取元素的高，不包含边框      
-3.	子元素与父元素的距离         
-元素.offsetLeft：获取当前元素距离body左边界的距离        
-元素.offsetTop：获取当前元素距离body上边界的距离        
-注意：如果该元素使用了定位属性，这时就是距离它最近的父元素的距离 
+	1：获取元素的宽：            
+			元素.style：只能获取内联样式。           
+			元素.offsetWidth ：获取元素的宽，也包含了内边距和边框     
+			元素.clientWidth：获取元素的宽，不包含边框        
+2.	获取元素的高:           
+	元素.offsetHeight ：获取元素的高，也包含了内边距和边框        
+	元素.clientHeight：获取元素的高，不包含边框         
+3.	子元素与父元素的距离                     
+元素.offsetLeft：获取当前元素距离body左边界的距离                   
+元素.offsetTop：获取当前元素距离body上边界的距离                  
+注意：如果该元素使用了定位属性，这时就是距离它最近的父元素的距离              
 DOM事件      
 一：鼠标键盘事件      
 
-	1）	鼠标事件
-	a)	点击事件：元素.onclick
-	b)	双击事件：元素.ondblclick
-	c)	鼠标按下事件：元素.onmousedown;
-	d)	鼠标抬起事件：元素.onmouseup
-	e)	1.鼠标移入事件：元素.onmouseover
-	f)	鼠标移出事件：元素.onmouseout
-	g)	2.鼠标移入事件：元素.onmouseenter
-	h)	鼠标移出事件：元素onmouseleava
-	第一套鼠标移入事件与第二套鼠标移入事件的区别
-	第一套会多次触发       第二套只能触发一次
+	1）	鼠标事件      
+	a)	点击事件：元素.onclick         
+	b)	双击事件：元素.ondblclick               
+	c)	鼠标按下事件：元素.onmousedown;            
+	d)	鼠标抬起事件：元素.onmouseup           
+	e)	1.鼠标移入事件：元素.onmouseover           
+	f)	鼠标移出事件：元素.onmouseout           
+	g)	2.鼠标移入事件：元素.onmouseenter                    
+	h)	鼠标移出事件：元素onmouseleava           
+	第一套鼠标移入事件与第二套鼠标移入事件的区别             
+	第一套会多次触发       第二套只能触发一次        
 
 2）	键盘事件
 使用键盘事件时 触发事件时需要传入一个e参数代表哪个事件触发的
@@ -128,3 +128,4 @@ DOM事件
 	b）IE监听器：attachEvent(监听事件,方法);
 	i.   监听事件需要加on
 			
+
