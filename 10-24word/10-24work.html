@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="txt" id="txt" value="" />
+		<input type="button" name="btn" id="btn" value="签到"/>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		<script type="text/javascript">
+			var txt=document.getElementById("txt");
+			var btn=document.getElementById("btn");
+			var dv=document.getElementById("dv");
+			var dv1=document.getElementById("dv1");
+			var namearr=["高天","帅杰","庆圣","鸿祥","恒源","自己"];
+			var narr=[];
+			btn.onclick=function(){
+				if(txt.value!=namearr[namearr.indexOf(txt.value)]){
+					alert("不存在此名字");
+				}else{
+					if(narr.length>=namearr.length){
+						alert("都已签到");
+					}else{
+						if(txt.value!=narr[narr.indexOf(txt.value)]){
+							narr.push(txt.value);
+							alert("签到成功");
+						}else{
+							alert("已签到");
+						}
+					}
+				}
+				if(narr.length!=namearr.length){
+					dv1.innerText=("还有"+(namearr.length-narr.length)+"位未签到");
+				}else{
+					dv1.innerText="已经全部签到完成";
+				}
+				dv.innerText="已签到："+narr;
+			}
+			
+		</script>
+	</body>
+</html>
