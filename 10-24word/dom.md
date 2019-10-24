@@ -22,8 +22,8 @@
 		注意：以js形式增加的样式的优先级大于css优先级 因为js拿到的是内联样式中的属性。   
 	6.	获取元素属性：getAttribute(“属性“);
 	  
-设置元素属性：setAttribute(“属性”,”属性值”);		
-删除元素属性：removeAttribute(“需要删除的属性”)；
+	设置元素属性：setAttribute(“属性”,”属性值”);		
+	删除元素属性：removeAttribute(“需要删除的属性”)；
 
 #####三：查找元素
 
@@ -41,11 +41,13 @@
 	与appenChild用法基本一样，但是insertBefore可以选择将元素插入到指定元素的前面   
 
 
-四：删除和替换元素   
-1.	元素的替换：元素.replaceChild();  该方法有两个参数;         
-参数1：将要替换的新元素 参数2：被替换的旧元素 逗号分割      
+#####四：删除和替换元素   
+
+	1.	元素的替换：元素.replaceChild();  该方法有两个参数;         
+	参数1：将要替换的新元素 参数2：被替换的旧元素 逗号分割      
+
 2：元素的删除：父元素.removeChild(“需要删除的元素”):         
-五：元素查找(node)
+#####五：元素查找(node)
 	1：node节点的属性：nodeName，nodeType，nodeValue;      
 	2：获取所有的子节点：childNodes;  所有的子节点不止包含元素.
 	3：获取第一个和最后一个子节点：      
@@ -56,32 +58,38 @@
 获取第一个兄弟节点：proviousSibling    
 获取最后一个兄弟节点:nextSibling      
 注意：只能获取一个       
-六：元素的宽高属性       
+#####六：元素的宽高属性       
 	1：获取元素的宽：            
+	
 			元素.style：只能获取内联样式。           
 			元素.offsetWidth ：获取元素的宽，也包含了内边距和边框     
 			元素.clientWidth：获取元素的宽，不包含边框        
+			
 2.	获取元素的高:           
+
 	元素.offsetHeight ：获取元素的高，也包含了内边距和边框        
 	元素.clientHeight：获取元素的高，不包含边框         
-3.	子元素与父元素的距离                     
-元素.offsetLeft：获取当前元素距离body左边界的距离                   
-元素.offsetTop：获取当前元素距离body上边界的距离                  
-注意：如果该元素使用了定位属性，这时就是距离它最近的父元素的距离              
+	
+3.	子元素与父元素的距离        
+             
+	元素.offsetLeft：获取当前元素距离body左边界的距离                   
+	元素.offsetTop：获取当前元素距离body上边界的距离                  
+	注意：如果该元素使用了定位属性，这时就是距离它最近的父元素的距离         
+	     
 DOM事件      
 一：鼠标键盘事件      
 
-	1）	鼠标事件      
-	a)	点击事件：元素.onclick         
-	b)	双击事件：元素.ondblclick               
-	c)	鼠标按下事件：元素.onmousedown;            
-	d)	鼠标抬起事件：元素.onmouseup           
-	e)	1.鼠标移入事件：元素.onmouseover           
-	f)	鼠标移出事件：元素.onmouseout           
-	g)	2.鼠标移入事件：元素.onmouseenter                    
-	h)	鼠标移出事件：元素onmouseleava           
-	第一套鼠标移入事件与第二套鼠标移入事件的区别             
-	第一套会多次触发       第二套只能触发一次        
+		1）	鼠标事件      
+		a)	点击事件：元素.onclick         
+		b)	双击事件：元素.ondblclick               
+		c)	鼠标按下事件：元素.onmousedown;            
+		d)	鼠标抬起事件：元素.onmouseup           
+		e)	1.鼠标移入事件：元素.onmouseover           
+		f)	鼠标移出事件：元素.onmouseout           
+		g)	2.鼠标移入事件：元素.onmouseenter                    
+		h)	鼠标移出事件：元素onmouseleava           
+		第一套鼠标移入事件与第二套鼠标移入事件的区别             
+		第一套会多次触发       第二套只能触发一次        
 
 2）	键盘事件
 使用键盘事件时 触发事件时需要传入一个e参数代表哪个事件触发的
